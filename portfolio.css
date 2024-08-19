@@ -1,0 +1,374 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: sans-serif;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+}
+:root{
+    --bg-color: #111
+    --second-bg-color: #151515
+    --text-color:#fff
+    --main-color: #04ffFB
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+body{
+    background: #111;
+    color:#fff;
+
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 3rem 9%;
+    background: black;
+    backdrop-filter:blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index:100;
+}
+.logo{
+    font-size: 3rem;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s ease-in;
+}
+.logo:hover{
+    transform: scale(1.1);
+}
+.logo span{
+    color: #04FFFB;
+}
+nav a{
+    font-size: 1.8rem;
+    color: white;
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease-in;
+    border-bottom: solid 3px transparent;
+
+}
+nav a:hover , nav .active{
+    color: #04FFFB;
+    border-color: #04FFFB;
+}
+
+#menu_icon{
+    font-size: 3.6rem;
+    color: #04FFFB;
+    cursor: pointer;
+    display: none;
+}
+
+section{
+    min-height: 100vh;
+    padding: 10rem 9% 10rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.homme{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+.homme-content{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 3rem;
+}
+span{
+    color: #04FFFB;
+}
+.homme-content h3{
+    font-size:3.5rem;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+}
+.homme-content h1{
+    font-size: 7rem;
+    font-weight: 700;
+    margin-top: 1.5rem;
+    line-height: 1;
+
+}
+.homme-img{
+    border-radius: 50%;
+}
+.homme-img img{
+    position: relative;
+    top: 3rem;
+    width: 22vw;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 0  25px #04FFFB;
+    cursor: pointer;
+    transition: 0.3 ease-in;
+}
+.homme-img img:hover{
+    box-shadow:0 0  50px #04FFFB, 0 0  100px #04FFFB ;
+}
+
+.homme-content p{
+    font-size: 1.5rem;
+    font-weight: 500;
+    max-width: 1000px;
+
+}
+.social-icons a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4.5rem;
+    height: 4.5rem;
+    background: transparent;
+    border: 0.2rem solid #04FFFB;
+    font-size: 2.5rem;
+    border-radius: 50%;
+    color: #04FFFB;
+    margin: 3rem 1.5rem;
+    transition: 0.3s ease-in-out;
+}
+.social-icons a:hover{
+    color: white;
+    transform: scale(1.1)translateY(-5px);
+    box-shadow: 0 0  25px #04FFFB;
+    background-color: #04FFFB;
+}
+.btn{
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    background: #04FFFB;
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    color: #fff;
+    border: 2px solid transparent;
+    letter-spacing: 0.01rem;
+    font-weight: 600;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+.btn:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 25px #04FFFB;
+    border-color:#fff;
+    color: #ffffff;
+}
+
+.text-animation{
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 280px;
+
+}
+.text-animation span{
+    position: relative;
+}
+.text-animation span::before{
+    content: 'Devellopeur Web';
+    animation: word 20s infinite;
+}
+
+.text-animation span::after{
+    content: '';
+    background-color: #111;
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: solid 3px #04FFFB;
+    right: -8px;
+    animation: cursor 0.6s infinite, typin 20s steps(14) infinite;
+}
+
+@keyframes cursor{
+    to{
+        border-left: solid 2px #04FFFB;
+    }
+
+}
+
+@keyframes word {
+    0%,
+    20%{
+        content: 'Devellopeur Web';
+    }
+    21%,
+    40%{
+        content: 'UI/UX Designeur';
+    }
+    41%,
+    60%{
+        content: 'Ingénieur Logiciel';
+    }
+    61%,
+    80%{
+        content: "Fils De Fidel";
+    }
+    81%,
+    100%{
+        content: 'Fils De Véronique';
+    }
+
+   
+}
+
+@keyframes typin{
+    10%,
+    15%,
+    30%,
+    35%,
+    50%,
+    55%,
+    70%,
+    75%,
+    90%,
+    95%{
+        width: 0;
+    }
+    5%,
+    20%,
+    25%,
+    40%,
+    45%,
+    60%,
+    65%,
+    80%,
+    85%{
+        width: calc(100% + 8px); 
+    }
+}
+
+
+
+
+
+
+
+
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    gap: 10rem;
+    background: #151515;
+    color: #fff;
+}
+.about h2 span{
+    text-shadow: 0 0 50px #04FFFB;
+}
+.about-img{
+    border-radius: 50%;
+}
+
+.about-img img{
+    position: relative;
+    width: 22vw;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 0 25px #04FFFB;
+    transition: 0.3s ease-in-out;
+}
+
+.about-img img:hover{
+    box-shadow: 0 0 50px #04FFFB, 0 0 100px #04FFFB ;
+}
+.heading{
+    text-align: start;
+    font-size: 8rem;
+}
+.about-content h3{
+    font-size: 2.6rem;
+    margin: 2rem 0;
+
+}
+.about-content p{
+    font-size: 1.6rem;
+    margin: 2rem 0 3rem;
+}
+
+::-webkit-scrollbar{
+    width: 15px;
+}
+::-webkit-scrollbar-thumb{
+    background: #04FFFB;
+}
+
+.services{
+    background:#111;
+    color: #fff;
+}
+
+.services h2{
+    text-align: center;
+    margin-bottom: 30px;
+}
+.services-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+    gap: 2.5rem;
+}
+.service-box{
+    background-color: #04FFFB;
+    color: black;
+    height: 250px;
+    border-radius: 3rem;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+.service-box:hover{
+    background-color: #fff;
+    color:#04FFFB;
+    transform: scale(1.03);
+
+}
+.services-info{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    max-height: 200px;
+    justify-content: center;
+    align-items: baseline;
+    padding: 5em;
+}
+.services-info h4{
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+.services-info p{
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin: auto;
+    max-height: 100px;
+}
